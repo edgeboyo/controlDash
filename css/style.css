@@ -5,3 +5,18 @@
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
+
+input {
+    background-color: #FFA500;
+    height: 12%;
+    margin: 10px;
+    font-family: monospace;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    font-family: monospace;
+}
