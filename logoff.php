@@ -15,6 +15,11 @@
     <input type="submit" value="Disconnect from WLAN"/>
 
 </form>
+<?php
+	$list = shell_exec("who | cut -d' ' -f1 | sort | uniq");
+
+	echo $list;
+?>
 </div>
     
 </body>
