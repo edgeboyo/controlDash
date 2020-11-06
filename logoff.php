@@ -12,14 +12,22 @@
     <form action="/logUserOff.php">
     <label>
         Select user to log off:</label><br/>
-    <input type="submit" value="Disconnect from WLAN"/>
-
-</form>
-<?php
+    <select name="user">
+    	<?php
 	$list = shell_exec("who | cut -d' ' -f1 | sort | uniq");
 
-	echo $list;
-?>
+	$arr = explode("\n", $list);
+
+	foreach($arr as $usr){
+		echo "<option value=" . $usr . ">" . $usr . "</option>";
+	}
+	?>
+	</select><br/>
+    
+    <input type="submit" value="Log user out..."/>
+
+</form>
+
 </div>
     
 </body>
