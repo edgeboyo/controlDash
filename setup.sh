@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install apache2 -y
+sudo apt install apache2 net-tools php ifupdown -y
 cd /tmp/
 rm -rf controlDash
 sudo rm -rf /var/www/html/*
