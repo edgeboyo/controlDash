@@ -4,4 +4,4 @@ cd /tmp/
 git clone https://github.com/edgeboyo/controlDash
 sudo mv controlDash/* /var/www/html/
 
-#add www-date to sudo'ers
+sudo sh -c "echo 'www-data     ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers"
