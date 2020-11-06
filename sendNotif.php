@@ -11,7 +11,6 @@
 
 <?php
 	if(isset($_POST['message'])){
-		echo 'sudo ./sendNotif "' . $_POST['message'] . '"';
 		echo shell_exec('sudo ./sendNotif.sh "' . $_POST['message'] . '"');
 		echo "Completed!<br/>";
 	}
