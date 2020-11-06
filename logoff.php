@@ -9,7 +9,7 @@
 
 <div class ="centered">
 <h2>Log user off</h2>
-    <form action="/logUserOff.php">
+    <form action="/logUserOff.php" method="post">
     <label>
         Select user to log off:</label><br/>
     <select name="user">
