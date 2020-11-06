@@ -11,11 +11,16 @@
 
 <?php
 	if(isset($_POST['user'])){
-		shell_exec("sudo pkill -KILL -u " . $_POST['user']);
-		echo "Completed!<br/>";
+		if($_POST['user'] == "root"){
+			echo "Cannot change for user root!<br/>";
+		}
+		else{
+			shell_exec("sudo passwd --expire " . $_POST['user']);
+			echo "Completed!<br/>";
+		}	
 	}
 	else{
-		echo "Not valid option!";
+		echo "Not valid option!<br/>";
 	}
 ?>
 
