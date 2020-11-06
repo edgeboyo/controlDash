@@ -8,12 +8,10 @@
 <body>
 
 <div class ="centered">
-<h2>Laptop Control Dashboard</h2>
-<form>
+<h2>Log user off</h2>
+    <label action"/logUserOff.php">Select user to log off:</label>
 <input type="submit" value="Disconnect from WLAN">
-<input type="submit" value="Log user out" onclick="location.href='/logoff.php';">
-<input type="submit" value="Send message">
-<input type="submit" value="Reset user password">
+
 </form>
 </div>
     
