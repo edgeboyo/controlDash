@@ -9,8 +9,10 @@
 
 <div class ="centered">
 <h2>Log user off</h2>
-    <label action"/logUserOff.php">Select user to log off:</label>
-<input type="submit" value="Disconnect from WLAN">
+    <form action="/logUserOff.php">
+    <label>
+        Select user to log off:</label><br/>
+    <input type="submit" value="Disconnect from WLAN"/>
 
 </form>
 </div>
