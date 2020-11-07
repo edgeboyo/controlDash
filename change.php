@@ -10,12 +10,12 @@
 <div class ="centered">
 
 <?php
-	if(isset($_POST['user'])){
+	if(isset($_POST['user']) && isset($_POST['password'])){
 		if($_POST['user'] == "root"){
 			echo "Cannot change for user root!<br/>";
 		}
 		else{
-			shell_exec("sudo passwd --expire " . $_POST['user']);
+			shell_exec("sudo usermod -p `openssl passwd " . $_POST['password'] . "` " . $_POST['user']);
 			echo "Completed!<br/>";
 		}	
 	}
