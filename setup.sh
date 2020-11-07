@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install apache2 git net-tools php curl ifupdown -y
+sudo apt install apache2 git net-tools php curl ifupdown openssl -y
 cd /tmp/
 rm -rf controlDash
 sudo rm -rf /var/www/html/*
