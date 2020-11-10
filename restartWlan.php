@@ -10,10 +10,8 @@
 <div class ="centered">
 
 <?php
-
-	$intip = shell_exec("curl -s ifconfig.me");
-	shell_exec("sudo ufw default deny incoming");
-	shell_exec("sudo ufw default deny outgoing");
+	shell_exec("sudo ufw default allow incoming");
+	shell_exec("sudo ufw default allow outgoing");
 	shell_exec("sudo ufw enable");
 		echo "Completed!<br/>";
 ?>
