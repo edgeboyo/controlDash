@@ -8,8 +8,13 @@ sudo mv controlDash/* /var/www/html/ -f
 
 sudo sh -c "echo 'www-data     ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers"
 
+
+
 clear
-echo "Server set up!" 
+echo "Server set up!"
+sudo ufw allow from any to any port 80
+sudo ufw enable
+echo "Firewall rules set up"
 echo "To enter the dashboard use a browser!"
 echo "To go from this computer enter 127.0.0.1:80"
 echo "To go from local machine enter "$(hostname -I | awk '{print $1}'):80
