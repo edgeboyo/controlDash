@@ -27,7 +27,7 @@
 	<label> Enter password: </label>
 	<input type="password" name ="password" required/> </br>
 	<label> Log out too? </label>
-	<input type="checkbox" name="logOff"/> </br>
+	<input type="checkbox" name="logOff" style="height: inherit"/> </br>
     <input type="submit" value="Change user's password..."/>
 
 </form>
