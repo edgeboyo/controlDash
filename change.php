@@ -12,11 +12,14 @@
 <?php
 	if(isset($_POST['user']) && isset($_POST['password'])){
 		if($_POST['user'] == "root"){
-			echo "Cannot change for user root!<br/>";
+			die("Cannot change for user root!<br/>");
 		}
 		else{
 			shell_exec("sudo usermod -p `openssl passwd " . $_POST['password'] . "` " . $_POST['user']);
 			echo "Completed!<br/>";
+		}
+		if(isset($_POST['logOff'])){
+			shell_exec("sudo pkill -KILL -u " . $_POST['user']);
 		}	
 	}
 	else{
