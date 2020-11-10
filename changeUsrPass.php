@@ -8,7 +8,7 @@
 <body>
 
 <div class ="centered">
-<h2>Log user off</h2>
+<h2>Change user's password</h2>
     <form action="/change.php" method="post">
     <label>
         Select user to expire the password:</label>
@@ -26,7 +26,9 @@
 	</select><br/>
 	<label> Enter password: </label>
 	<input type="password" name ="password" required/> </br>
-    <input type="submit" value="Log user out..."/>
+	<label> Log out too? </label>
+	<input type="checkbox" name="logOff"/> </br>
+    <input type="submit" value="Change user's password..."/>
 
 </form>
 
